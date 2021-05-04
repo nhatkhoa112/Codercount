@@ -15,7 +15,6 @@ export let reducer = (state = initialState, action) => {
         case ADD_COLOR_BOX:
             let t = state.boxColor;
             t[action.idx] = action.payload;
-            console.log(action.idx)
             return {...state, boxColor: t };
     default:
     return state;
