@@ -23,8 +23,12 @@ function App() {
               onClick={()=> dispatch(increaseCount(count))}
               className="button increment">Increment</button>
           <button 
-              onClick={()=> dispatch(decreaseCount(count))}
-              className="button increment">Decrement</button>
+              onClick={()=> {
+                if(count >0){
+                  dispatch(decreaseCount(count))
+                }           
+              }}
+              className="button decrement">Decrement</button>
         </div>
       </div>
       <div className="box-list">
