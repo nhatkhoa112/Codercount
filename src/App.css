@@ -1,0 +1,93 @@
+.App{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.App .main-box{
+  width: 100%;
+  height: 30vh;
+  background: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-box h1, h3{
+  flex: 1.5;
+}
+
+.App .main-box .form-input-button{
+  flex: 3;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.App .main-box .form-input-button input[type="text"]{
+  background: transparent;  
+  padding: 5px 10px;
+  color: white;
+  border: 2px crimson solid;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 5px crimson;
+  margin-bottom: 10px;
+  height: 30%;
+
+}
+
+.App .main-box .form-input-button input[type="text"]::placeholder{
+  color: white;
+}
+
+.App .main-box .form-input-button button{
+  padding: 0 10px;
+  background: crimson;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid crimson;
+  box-shadow: 0 0 4px 4px #ccc;
+  height: 30%;
+}
+
+.App .main-box .form-input-button button:hover{
+  box-shadow: 0 0 8px 8px #ccc;
+  background: rgb(160, 16, 44);
+  border: none;
+}
+
+.box-list{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.box{
+  width: 100%;
+  margin: 5px;
+  padding: 30px 20px;
+  border: 2px black solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.box .text{ 
+  flex: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.box .input{ 
+  flex: 1;
+  padding: 5px 20px;
+  width: 100%;
+  color: rgb(41, 40, 40);
+  border-radius: 10px;
+  border: 1.2px #ccc solid;
+  box-shadow: 0 0 2px 2px #ccc; 
+}
