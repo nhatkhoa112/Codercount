@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
@@ -7,7 +6,6 @@ import {increaseCount, decreaseCount,addColor, addColorBox} from './redux/action
 function App() {
   const dispatch = useDispatch()
   const {count, color, boxColor} =  useSelector( state => state)
-  const [colorBoxItem, setColorBoxItem] = useState("")
 
   return (
     <div className="App">
@@ -35,9 +33,8 @@ function App() {
               <h1 className="text">Box {idx + 1}</h1>
               <input type="text" 
                     className="input" 
-                    value={colorBoxItem || boxColor[idx]}
+                    value={boxColor[idx]}
                     onChange={(e) => {
-                      setColorBoxItem(e.target.value)
                       dispatch(addColorBox(e.target.value, idx))
                     }}
                     />
